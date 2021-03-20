@@ -1,0 +1,45 @@
+<div class="login">
+  <div class= "fundo-cadastro">
+    <h4>DATA CG</h4>
+    <h1>Vamos cuidar da saúde?</h1>
+  
+    <form action="#" role="form"   class="campos" [formGroup]="formRegister" (ngSubmit)="onSubmit()"  name="dados">
+  
+          <label>Usuario</label>
+          <input type="text" class="form-control" placeholder="Usuario" formControlName="nome">
+          <p></p>
+          <label>email</label>
+          <input  type="text" class="form-control" placeholder="Email" formControlName="email">
+          <p></p>
+  
+          <label>Senha</label>
+          <input mgsErro="Senha obrigatoria" type="password" id="password"  minlength="8" required class="form-control" placeholder="Senha" formControlName="senha">
+          <p></p>
+  
+          <label>Confirmar sua senha</label>
+          <input type="password" id="password_conf"   minlength="8" required class="form-control" placeholder="Confirmar sua senha" formControlName="senhaConfirmar">
+          <p></p>
+  
+          <label>Data nascimento</label>
+          <input id="date" type="date" formControlName="dataNascimento">
+          <p></p>
+  
+          <label>Endereço</label>
+          <input type="text" class="form-control" placeholder="endereco" formControlName="endereco">
+          <p></p>
+  
+          <label>Altura</label>
+          <input type="number" placeholder="Altura" formControlName="altura">
+          <p></p>
+  
+          <label>Peso</label>
+          <input type="number" placeholder="Peso" formControlName="peso">
+  
+        <button mat-button class="submit"  [disabled]="!formRegister" (click)="onSubmit()"  >Cadastrar</button>
+  
+       </form>
+  
+  
+  
+      </div>
+   </div>

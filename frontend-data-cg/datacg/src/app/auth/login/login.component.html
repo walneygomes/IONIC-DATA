@@ -1,0 +1,45 @@
+
+<div class="login" fxLayoutAlign="center" fxLayout="row">
+  <div class="heading">
+    <div class= "fundo-login">
+      <h4>DATA CG</h4>
+      <h1>Vamos cuidar da saúde?</h1>
+      <div fxLayout="column" >
+        <div fxLayoutAlign="center" fxLayout="row">
+          <form class="campos" [formGroup]="loginForm" (ngSubmit)="onSubmit()" >
+      
+            <mat-card class="login-card mat-elevation-z8" >
+                <mat-card-title>Login</mat-card-title>
+                <mat-card-content fxLayout="column" >
+                    
+                 <div class="email">
+
+                <input type="text" class="form-control" placeholder="Username or email" formControlName="email">
+
+                  </div>
+                <div class="password">
+                  <input type="password" class="form-control" placeholder="Password" formControlName="senha">
+                  </div>
+                </mat-card-content>
+                <mat-card-actions fxLayout="row" fxLayoutAlign="end center" >
+                  <button type="submit" class="float" (click)="onSubmit()" >Entrar</button>
+
+                  <button class="cadastrar" type="submit" routerLink="/auth/register" >Cadastro</button>
+      
+                </mat-card-actions>
+      
+            </mat-card>
+          </form>
+      
+        </div>
+      </div>
+      
+
+
+    </div>
+
+ 		</div>
+ </div>
+
+  
+

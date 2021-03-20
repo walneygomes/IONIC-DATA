@@ -1,0 +1,97 @@
+@media(min-width:900px){
+
+.telausuario{
+    background-color: rgb(255, 255, 255);
+   
+}
+* { margin: 0; padding: 0; }
+.conteudo-imc {
+    background-image: url("https://uploads.metropoles.com/wp-content/uploads/2020/03/05182118/Mulher-na-academia-600x400.jpg");
+    background-size: cover;
+
+    height: 190px;
+   text-align: center;
+}
+.topo{
+
+    background-color: rgb(255, 255, 255);
+
+
+}
+.menu{
+    margin-left: 892px;
+    border-radius: 100%;
+
+    background-color: white;
+    height: 50px;
+    width:100px;
+ 
+}
+
+}
+
+@media(max-width:700px){
+    .telausuario{
+        background-color: rgb(255, 255, 255);
+    }
+    .conteudo-imc {
+        background-image: url("http://s2.glbimg.com/7i2XL3Chn51dQIlsP2mtMYs0JkA=/0x0:2000x1546/310x240/s.glbimg.com/es/ge/f/original/2015/10/22/gettyimages-535861491_1.jpg");
+        background-size: cover;
+
+        height: 250px;
+       text-align: center;
+    }
+    .topo{
+    
+        background-color: blue;
+    
+    
+    }
+    * { margin: 0; padding: 0; }
+    .menu{
+        margin-left: 292px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 100%;
+        background-position: -15px -15px;
+     
+    }
+}
+.fundo-cadastro{
+    background-image: url("https://s2.glbimg.com/6SecXGenHZXiV7HlL-iFJMdlfrM=/0x0:1700x1065/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2018/y/s/5K5DThSAatZIElfyMYmQ/incendio2.jpg");
+    
+    width: 390px;
+    padding: 100px;
+    background-size: cover;
+
+}
+
+ion-badge {
+    color: #fff;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border-radius: 10%;
+}
+ 
+.category-block {
+    margin-bottom: 4px;
+}
+ 
+.category-banner {
+    border-left: 8px solid var(--ion-color-secondary);
+    background: rgb(253, 117, 117);
+    height: 40px;
+    padding: 10px;
+    font-weight: 500;
+}
+
+ 
+.menu-informacao, b{
+    background: rgb(255, 255, 255);
+    position: center;
+   
+        text-align: center 
+ 
+
+    
+}

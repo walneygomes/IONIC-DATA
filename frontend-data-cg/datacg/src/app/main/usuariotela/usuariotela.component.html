@@ -1,0 +1,85 @@
+{{ altura}}
+
+
+<div *ngIf= "!(user$ | async)">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Olá, {{ (user$ | async)?.nome}}  </ion-title>
+    </ion-toolbar>
+ 
+  <div class= "telausuario">
+  <div class="topo">
+    <div class="conteudo-imc">
+      
+      
+      <div class="menu">
+
+
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>
+            <mat-icon>directions_run</mat-icon>
+            <span>Praticar</span>
+          </button>
+        </mat-menu>
+      </div>
+
+      <img src="https://www.flaticon.com/svg/vstatic/svg/38/38464.svg?token=exp=1615681511~hmac=b970d2025c4c2355b66ad0284b00c668" width="192" height="65" />
+      <h5>Vamos cuidar da saúde?</h5>
+        
+      <p>{{calcularIMC(((user$ | async)?.altura), ((user$ | async)?.peso))      }}</p>
+
+      
+    </div>
+    <div class="menu-informacao">  <b>IMC: {{IMC}}  {{ calcularClassificacao() }}     </b>     </div>
+
+  
+
+  </div>
+ 
+
+
+  <div *ngFor="let cat of items" class="category-block">
+ 
+    <ion-row no-padding class="category-banner">
+      <ion-col text-left button tappable (click)="cat.expanded = !cat.expanded" align-self-center>
+        {{ cat.category }}
+      </ion-col>
+    </ion-row>
+ 
+    <ion-slides [options]="sliderConfig">
+      <ion-slide *ngFor="let product of cat.products">
+        <div *ngIf="cat.expanded">
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>
+                {{ product.name }}  
+              </ion-card-title>
+              
+              <ion-card-content>
+                <img src={{product.image}}  width= "9" height= "20" >
+                <ion-button expand="full" (click)="addToCart(product)">Veja mais</ion-button>
+              </ion-card-content>
+
+
+            </ion-card-header>
+          </ion-card>
+        </div>
+      </ion-slide>
+    </ion-slides>
+ 
+  </div>
+
+
+
+</div>
+</ion-header>
+</div>
+
+<div *ngIf= "!(auth$ | async)">
+
+    <app-login></app-login>
+</div>
+
